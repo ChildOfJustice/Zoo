@@ -1,30 +1,29 @@
-//
-// Created by Andy on 06/07/2019.
-//
 
 #ifndef ZOOO_ZOO_H
 #define ZOOO_ZOO_H
 
-#include <iostream>
+
 #include <vector>
 #include <memory>
+#include <iostream>
+
 #include "Animal.h"
 
-class Zoo final {
+class Zoo {
 private:
-    int sizeForUniquePtrs;
-    int size;
-    std::vector<std::unique_ptr<Animal>>* animalsWithUniquePtrs = new std::vector<std::unique_ptr<Animal>>;
-
-    Animal** animals;
+	int sizeForUnique;
+	int size;
+	std::vector<std::unique_ptr<Animal>> animalsWithUnique;
+	Animal** animals;
 
 public:
-    explicit Zoo(int sizeForUniquePtrs, int _size);
+	Zoo(int sizeForUniquePtrs, int _size);
 
-    void action();
+	void action();
 
-    ~Zoo();
+	~Zoo();
 };
 
 
 #endif //ZOOO_ZOO_H
+
